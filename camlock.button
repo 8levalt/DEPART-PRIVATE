@@ -1,0 +1,44 @@
+local screenGui = Instance.new("ScreenGui")
+screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 300, 0, 150)
+frame.Position = UDim2.new(0.5, -150, 0.5, -75)
+frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+frame.Parent = screenGui
+
+local textLabel = Instance.new("TextLabel")
+textLabel.Size = UDim2.new(1, 0, 0.6, 0)
+textLabel.Position = UDim2.new(0, 0, 0, 0)
+textLabel.BackgroundTransparency = 1
+textLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+textLabel.Font = Enum.Font.Arcade
+textLabel.Text = "Click Continue To Accsess to the script. Thank You For Using This Script That Made By @_gragrillz on discord"
+textLabel.TextSize = 19
+textLabel.TextWrapped = true
+textLabel.Parent = frame
+
+local continueButton = Instance.new("TextButton")
+continueButton.Size = UDim2.new(0.4, 0, 0.3, 0)
+continueButton.Position = UDim2.new(0.1, 0, 0.65, 0)
+continueButton.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+continueButton.Text = "Continue"
+continueButton.Parent = frame
+
+local Button = Instance.new("TextButton")
+Button.Size = UDim2.new(0.4, 0, 0.3, 0)
+Button.Position = UDim2.new(0.5, 0, 0.65, 0)
+Button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Button.Text = "Nvm ×"
+Button.Parent = frame
+
+Button.MouseButton1Click:Connect(function()
+    print("Button Clicked")
+screenGui:Destroy()
+end)
+
+continueButton.MouseButton1Click:Connect(function()
+    print("Continue button clicked")
+screenGui:Destroy()
+loadstring(game:HttpGet("https://pastebin.com/raw/7FSZggHP"))()
+end)
